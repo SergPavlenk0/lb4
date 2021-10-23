@@ -3,31 +3,7 @@ using System.Diagnostics;
 
 namespace Task1
 {
-    public class Class1
-    {
-        public virtual void WhatToDebug(params object[] args)
-        {
-            Debug.WriteLine("Arguments: ");
-            Debug.Indent();
-
-            foreach(var argument in args)           
-                Debug.WriteLine(argument);
-
-            Debug.Unindent();          
-        }
-    }
-    public class Class2: Class1
-    {
-        public override void WhatToDebug(params object[] args)
-        {
-            Debug.WriteLine("Arguments: ");
-            Debug.Indent();
-
-            foreach (var argument in args)
-                Debug.WriteLine($"http://{argument.GetType()}: {argument}");
-            Debug.Unindent();
-        }
-    }
+    
     class Program
     {
         static void Main(string[] args)
